@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<script src="js/jquery-3.1.0.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/public.js"></script>
+		<script>
+			document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="scroller">
+				<ul>
+					<li>
+						<div class="top-header">
+							<div class="logo-text">
+								<div class="text-p">
+									<p class="p1">下载手机app</p>
+									<p class="p2">特价惊喜抢不停!</p>
+								</div>
+								<div class="logo-text-right">
+									<a href="##">下载</a>
+								</div>
+							</div>
+						</div>
+						<div class="top-control">
+							<a href="index.html" class="iconfont icon-xiangzuojiantou"></a>
+							<span>惊喜周年庆&nbsp;狂欢再续</span>
+							<a href="##" class="iconfont icon-fenxiang"></a>
+						</div>
+					</li>
+					<li>
+						<a href="##" class="banner-img">
+							<img src="img/list-b.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<div class="time">
+							<p>
+								<em>--距离12.8惊喜返场结束仅剩--</em>
+							</p>
+							<div class="return-time">
+								<span>5</span>
+								<span>6</span>
+								时
+								<span>0</span>
+								<span>0</span>
+								分
+								<span>0</span>
+								<span>0</span>
+								秒
+								<span class="mactive">0</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="##" class="category">
+							<img src="img/gg.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<div class="list-first-floor">
+							<img src="img/list-first.jpg"/>
+						</div>
+					</li>
+					<li>
+						<a href="##" class="category">
+							<img src="img/gg2.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<div class="second-floor">
+							<img src="img/gg3.jpg"/>
+						</div>
+					</li>
+					<li>
+						<div class="third-floor">
+							<img src="img/third1.jpg" alt="" />
+							<img src="img/third2.jpg" alt="" />
+							<img src="img/third3.jpg" alt="" />
+							<img src="img/third4.jpg" alt="" />
+							<img src="img/third5.jpg" alt="" />
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<footer>
+		<a href="##" class="iconfont icon-gouwuche footer-left"></a>
+		<a href="##" class="iconfont icon-xiangshangjiantou footer-right"></a>
+		<a href="##" class="footer-center">
+			<img src="img/jump_button.png" alt="" />
+			<span>直接在APP打开</span>
+		</a>
+	</footer>
+	</body>
+	<script type="text/javascript">
+		function loaded(){
+	  		myScroll = new IScroll("#wrapper",{
+	  			mouseWheel:true,
+	  			bounce:true,
+	  			click:true
+	  		});
+		}
+		
+		window.onload=function(){
+			resize(750);
+			loaded();
+			function timecha(now,fature){
+				var arr=[];
+				var time=now.getTime();var time1=fature.getTime();
+				var cha=(time1-time)/1000;
+				
+				var day=parseInt(cha/(60*60*24));
+				arr.push(day);
+				
+				var hour=parseInt((cha%(60*60*24))/3600);
+				arr.push(hour)
+				
+				var min=parseInt(cha%(3600*24)%3600/60);
+				arr.push(min);
+				
+				var miao=parseInt(cha/(3600*24)%3600%60)
+				arr.push(miao)
+				
+				return arr;
+				
+			}
+			var now=new Date();
+			var fature=new Date(2016,12,20,0,0,0);
+			
+			var arr=timecha(now,fature)
+			
+			for(var i=0; i<arr.length; i++){
+				
+			}
+		}
+		
+	</script>
+</html>
